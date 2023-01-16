@@ -26,16 +26,21 @@ func _physics_process(delta):
 	
 	if grounded && Input.is_action_just_pressed("jump"):
 		motion.y = -JUMP_FORCE;
+		play_anim("jump");
+		$snd_jump.play();
 		
 	if walled && move_dir != 0:
 		y_velo = 0.5;
 		if Input.is_action_just_pressed("jump"):
 			motion.x += -2 * move_dir * JUMP_FORCE /6;
 			motion.y = -JUMP_FORCE;
+			play_anim("jump");
+			$snd_jump.play();
 			
 	if Input.is_action_just_pressed("dash") && dtimer.is_stopped():
 		motion.x += move_dir * DASH_FORCE;
 		dtimer.start();
+		$snd_jump.play();
 			
 	if move_dir != 0:
 		motion.x += move_dir * ACCELERATION * delta;
@@ -56,7 +61,7 @@ func _physics_process(delta):
 			play_anim("idle");
 		else:
 			play_anim("run");
-	else:
+	else: 
 		play_anim("jump");
 	
 func flip():
@@ -67,3 +72,4 @@ func play_anim(anim_name):
 	if animplayer.is_playing() and animplayer.current_animation == anim_name:
 		return;
 	animplayer.play(anim_name);
+	

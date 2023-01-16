@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jump.wav-e0165b3ad3a64bb6f9609d6f0170dbac.sample"
+
+[deps]
+
+source_file="res://assets/snd/jump.wav"
+dest_files=[ "res://.import/jump.wav-e0165b3ad3a64bb6f9609d6f0170dbac.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
