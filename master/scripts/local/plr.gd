@@ -15,6 +15,8 @@ onready var dtimer = $dashTimer;
 var motion = Vector2.ZERO;
 var y_velo = 1;
 var face_right = true;
+var jump_anim := false;
+
 
 func _physics_process(delta):
 	y_velo = 1;
@@ -55,14 +57,14 @@ func _physics_process(delta):
 		flip();
 	if !face_right and move_dir > 0:
 		flip();
-		
+	
 	if grounded:
 		if move_dir == 0:
 			play_anim("idle");
 		else:
 			play_anim("run");
-	else: 
-		play_anim("jump");
+	else:
+		play_anim("fall");
 	
 func flip():
 	face_right = !face_right;
@@ -72,4 +74,3 @@ func play_anim(anim_name):
 	if animplayer.is_playing() and animplayer.current_animation == anim_name:
 		return;
 	animplayer.play(anim_name);
-	
