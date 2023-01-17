@@ -3,7 +3,7 @@
 [ext_resource path="res://master/scripts/local/plrspawn.gd" type="Script" id=1]
 [ext_resource path="res://assets/img/editor_plrspawn.png" type="Texture" id=2]
 
-[node name="Node2D" type="Node2D"]
+[node name="plr_spawn" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
