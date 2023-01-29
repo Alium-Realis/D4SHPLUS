@@ -15,5 +15,3 @@ func _process(delta):
 		var item_instance = current_item.instance();
 		level.add_child(item_instance);
 		item_instance.global_position = global_position;
-		print(current_item);
-	pass
