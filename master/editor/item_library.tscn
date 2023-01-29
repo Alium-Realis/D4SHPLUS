@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://master/editor/entities/editor_plrspawn.tscn" type="PackedScene" id=1]
+
+[node name="item_library" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 256.0
+margin_bottom = 128.0
+tab_align = 0
+
+[node name="Objects" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Objects"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Objects/ScrollContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Objects/ScrollContainer/VBoxContainer"]
+margin_right = 16.0
+margin_bottom = 16.0
+
+[node name="item_plsrspawn" parent="TabContainer/Objects/ScrollContainer/VBoxContainer/HBoxContainer" instance=ExtResource( 1 )]
+margin_right = 16.0
+margin_bottom = 16.0
+
+[node name="Baddies" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Baddies"]
+margin_right = 12.0
+margin_bottom = 12.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Baddies/ScrollContainer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer/Baddies/ScrollContainer/VBoxContainer"]

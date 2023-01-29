@@ -425,3 +425,6 @@ material = SubResource( 67 )
 position = Vector2( 320, 180 )
 scale = Vector2( 10, 5.625 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}

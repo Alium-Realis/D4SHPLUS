@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://master/editor/editor_object.gd" type="Script" id=1]
+[ext_resource path="res://master/editor/item_library.tscn" type="PackedScene" id=2]
+
+[node name="editor_root" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="editor_object" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="editor_object"]
+
+[node name="item_library" parent="." instance=ExtResource( 2 )]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 16.0
+margin_bottom = 16.0
